@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+:root {
+  --main_color: #66274e;
+  --accent_color: #c20379;
+}
+*{
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: rgb(230, 230, 230);
+  margin: 0;
+}
+header{
+    background-color: #1b1b1b;
+    margin: 0;
+    padding: 0;    
+}
+.wrapper__header{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0 50px;
+    padding: 15px;
+}
+.wrapper__logo {
+    display: flex;
+    justify-content: flex-start;
+}
+.wrapper__logo img{
+    height: 80px;
+    width: auto;
+    
+}
+
+.wrapper__titles {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.wrapper__titles h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+.wrapper__titles img{
+    margin-left: 30px;
+    height: 30px;
+    width: auto;
+    align-items: center;
+}
+
+h4 {
+  margin: 10px 0 0;
+  padding: 0;
+  color: var(--main_color);
+  font-size: 0.8em;
+}
+
+img {
+  width: 90px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* #hero img{
+    width: 100%;
+    height: auto;
+    max-width: 1920px;
+} */
+#hero{
+    background-image: url(../img/e-commerce-new.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 600px;
+    
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+
+
+
+.wrapper__products, .wrapper__jewelry {
+  margin: 40px;
+  padding: 20px;
+  height: 35vh;
+  display: flex;
+  overflow-y: hidden;
+}
+.wrapper__products h2, .wrapper__jewelry h2 {
+    display: block;
+    width: 100%;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+  background: #fff;
+  margin: 00 15px;
+  padding: 20px;
+
+  min-width: 180px;
+  
+
+  box-shadow: 0 0 10px #3a3a3a3f;
+  border-radius: 12px;
+
+  opacity: 0.78;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+
+.product:hover {
+  transform: scale(0.9);
+  border: 2px solid var(--accent_color);
+}
+
+.product:active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.product p {
+  align-self: flex-start;
+}
+
+/*footer settings*/
+footer{
+    background: #000;
+    padding: 50px;
+    margin: 0 auto;
+}
+footer p{
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+footer a{
+    color: #fff;
+    text-decoration: underline;
+}
