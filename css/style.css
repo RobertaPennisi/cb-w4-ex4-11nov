@@ -27,11 +27,11 @@ header{
 .wrapper__logo {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
 .wrapper__logo img{
-    height: 80px;
+    height: 60px;
     width: auto;
-    
 }
 
 .wrapper__titles {
@@ -48,7 +48,6 @@ header{
     margin-left: 30px;
     height: 30px;
     width: auto;
-    align-items: center;
 }
 
 h4 {
@@ -66,11 +65,7 @@ strong {
   font-weight: bold;
 }
 
-/* #hero img{
-    width: 100%;
-    height: auto;
-    max-width: 1920px;
-} */
+
 #hero{
     background-image: url(../img/e-commerce-new.jpg);
     background-repeat: no-repeat;
@@ -88,17 +83,35 @@ strong {
   padding: 30px;
 }
 
+.wrapper_order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper_buttons{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+.wrapper_buttons button{
+    padding: 5px 20px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    box-shadow: 0 0 10px #3a3a3a3f;
+}
 
 
-
-.wrapper__products, .wrapper__jewelry {
+.wrapper__products, .wrapper__newproducts {
   margin: 40px;
   padding: 20px;
   height: 35vh;
   display: flex;
   overflow-y: hidden;
 }
-.wrapper__products h2, .wrapper__jewelry h2 {
+.wrapper__products h2, .wrapper__newproducts h2 {
     display: block;
     width: 100%;
 }

@@ -35,14 +35,30 @@ fetch("https://fakestoreapi.com/products")
 .then((data) => {
     products = data;
     renderProducts(wrapperProducts);
-   // renderProducts(wrapperJewelry);
-    renderOtherProducts(wrapperJewelry)
+    renderOtherProducts(wrapperOtherProducts);
+    
+    
+    azSort.addEventListener('click', () => {
+        products.sort((a, b) => (a.title > b.title) ? 1 : -1);
+        
+        while(wrapperProducts.firstChild) wrapperProducts.removeChild(wrapperProducts.lastChild);
+        renderProducts(wrapperProducts)
+    });
+
+    priceSort.addEventListener('click', () => {
+        products.sort((a, b) => (a.price > b.price) ? 1 : -1);
+        
+        while(wrapperProducts.firstChild) wrapperProducts.removeChild(wrapperProducts.lastChild);
+        renderProducts(wrapperProducts)
+    });
 });
 
 
 let products = [];
 const wrapperProducts = document.querySelector(".wrapper__products");
-const wrapperJewelry = document.querySelector(".wrapper__jewelry");
+const wrapperOtherProducts = document.querySelector(".wrapper__newproducts");
+const azSort = document.querySelector("#a-z-sort");
+const priceSort = document.querySelector("#price-sort");
 
 function renderProducts(parent) {
      products.map((product) =>{
@@ -55,3 +71,5 @@ function renderOtherProducts(parent) {
         createProduct(parent, product.imgUrl, product.name, product.price)
     });
 };
+
+
